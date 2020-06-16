@@ -1,0 +1,178 @@
+
+<app-navbar [message] = true></app-navbar>
+
+<section class="section-hero overlay inner-page bg-image" style="background-image: url('./assets/images/hero_1.jpg');" id="home-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h1 class="text-white font-weight-bold">Profile</h1>
+            <div class="custom-breadcrumbs">
+              <a href="#">Home</a> <span class="mx-2 slash">/</span>
+              <span class="text-white"><strong>Profile</strong></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <h2 class="mb-4">Profile</h2>
+            <form style="width: 120%;" action="#" class="p-1 border rounded">
+                  <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="text-black" for="fname">UserName</label>
+                        <textarea readonly class="form-control">{{nameuser}}</textarea>
+                        <!-- <input [(ngModel)]='login.username' [ngModelOptions]="{standalone: true}" type="text" id="fname" class="form-control" placeholder="User Name"> -->
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="text-black" for="fname">Email</label>
+                        <textarea readonly class="form-control">{{email}}</textarea>
+                        <!-- <input [(ngModel)]='login.username' [ngModelOptions]="{standalone: true}" type="text" id="fname" class="form-control" placeholder="User Name"> -->
+                      </div>
+                    </div>
+                    <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="text-black" for="fname">Phone</label>
+                        <textarea readonly class="form-control">{{phone}}</textarea>
+
+                        <!-- <input [(ngModel)]='login.username' [ngModelOptions]="{standalone: true}" type="text" id="fname" class="form-control" placeholder="User Name"> -->
+                      </div>
+                    </div>
+
+
+                    <div class="row form-group">
+                      <div class="col-md-12 mb-3 mb-md-0">
+                        <label class="text-black" for="fname">Desktops</label>
+                        <!-- <textarea class="form-control" ng="let x of nameuser">{{x}}</textarea> -->
+                        <!-- <input [(ngModel)]='login.username' [ngModelOptions]="{standalone: true}" type="text" id="fname" class="form-control" placeholder="User Name"> -->
+                      </div>
+                    </div> 
+                  <ul class="job-listings mb-5" *ngFor="let x of desktops">
+                    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center"  >
+                    
+                      <div class="job-listing-logo">
+                        <img src="{{x.image_urls}}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+                      </div>
+
+                      <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+                        <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                          <h2>{{x.name}}</h2>
+                          <!-- <strong><a target="_blank" href="{{x.url}}">More Details</a></strong> -->
+                        </div>
+
+                        <div class="job-listing-meta">
+                          <span class="badge badge-success">{{x.price}} NIS</span>
+                        </div>
+                        <div class="job-listing-meta">
+                          <span class="badge badge-success">{{x.phone}}</span>
+                        </div>
+                      </div>
+                      
+                    </li>
+                    <!-- <button style="color: red;"></button> -->
+                    <button type="button" class="btn btn-outline-danger" (click)= delete(x)>Delete</button>
+                    <button type="button" class="btn btn-outline-primary" (click)="info(x)" (click)="openModal(edit)">Edit</button>
+                  </ul>
+
+                  <div class="row form-group">
+                    <div class="col-md-12 mb-3 mb-md-0">
+                      <label class="text-black" for="fname">Laptops</label>
+                      <!-- <textarea class="form-control" ng="let x of nameuser">{{x}}</textarea> -->
+                      <!-- <input [(ngModel)]='login.username' [ngModelOptions]="{standalone: true}" type="text" id="fname" class="form-control" placeholder="User Name"> -->
+                    </div>
+                  </div> 
+
+                  <ul class="job-listings mb-5" *ngFor="let x of laptops">
+                    <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center"  >
+                    
+                      <div class="job-listing-logo">
+                        <img src="{{x.image_urls}}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+                      </div>
+
+                      <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+                        <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                          <h2>{{x.name}}</h2>
+                          <!-- <strong><a target="_blank" href="{{x.url}}">More Details</a></strong> -->
+                        </div>
+
+                        <div class="job-listing-meta">
+                          <span class="badge badge-success">{{x.price}} NIS</span>
+                        </div>
+                        <div class="job-listing-meta">
+                          <span class="badge badge-success">{{x.phone}}</span>
+                        </div>
+                      </div>
+                      
+                    </li>
+                    <button type="button" class="btn btn-outline-danger" (click)= delete2(x)>Delete</button>
+                    <button type="button" class="btn btn-outline-primary" (click)="info2(x)" (click)="openModal(edit)">Edit</button>
+                  </ul>
+
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Edit-->
+<ng-template #edit>
+  <div class="modal-header">
+      <h4 class="modal-title pull-left">Modal</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+          <span aria-hidden="true">&times;</span>
+      </button>
+  </div>
+  <form>
+      <div class="modal-body">
+          <div class="form-row">
+
+              <div class="form-group col-md-6">
+                  <label>Name</label>
+                  <input type="text" class="form-control" [(ngModel)]='selected.name'
+                      [ngModelOptions]="{standalone: true}" placeholder="Name" id="name">
+              </div>
+
+              <div class="form-group col-md-6">
+                  <label>Price</label>
+                  <input type="text" class="form-control" [(ngModel)]='selected.price'
+                      [ngModelOptions]="{standalone: true}" placeholder="Price" id="price">
+              </div> 
+
+              <div class="form-group col-md-6">
+                <label>Phone</label>
+                <input type="text" class="form-control" [(ngModel)]='selected.phone'
+                    [ngModelOptions]="{standalone: true}" placeholder="phone" id="phone">
+            </div> 
+
+              <!-- <div class="form-group col-md-6">
+                  <label>Date of Birth</label>
+                  <input type="datetime-local" class="form-control" [(ngModel)]='selected.dateOfBirth'
+                      [ngModelOptions]="{standalone: true}" placeholder="yy/mm/dd" id="dateOfBirth">
+              </div>
+
+               <div class="form-group col-md-6">
+                  <label>Type</label>
+                  <select name="type" id = "type"  class="form-control" [(ngModel)]='selected.type'
+                  [ngModelOptions]="{standalone: true}">
+                      <option value="User">User</option>
+                      <option value="Admin">Admin</option>
+                    </select>
+              </div> -->
+              <!-- <div class="form-group col-md-6">
+                  <label>Src</label>
+                  <input type="file"  class="form-control" [(ngModel)]='selected.src'
+                      [ngModelOptions]="{standalone: true}" placeholder="Type" id="src" (change)="onChange($event)">
+              </div> -->
+          </div> 
+
+          <button type="button" class="btn btn-primary" id="edit" (click)="save()"
+              (click)="modalRef.hide()">Save</button>
+          <button value="cancel" class="btn btn-primary" id="cancel"
+              (click)="modalRef.hide()">cancel</button>
+      </div>
+  </form>
+</ng-template>

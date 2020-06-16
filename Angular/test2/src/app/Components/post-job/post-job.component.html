@@ -1,0 +1,174 @@
+<!-- HOME -->
+<!-- <app-navbar [message] = true></app-navbar> -->
+<section _ngcontent-ske-c55="" id="home-section" class="section-hero overlay inner-page bg-image"
+  style="background-image: url('./assets/images/hero_1.jpg');">
+  <div _ngcontent-ske-c55="" class="container">
+    <div _ngcontent-ske-c55="" class="row">
+      <div _ngcontent-ske-c55="" class="col-md-7">
+        <h1 _ngcontent-ske-c55="" class="text-white font-weight-bold">Post an Ads</h1>
+        <div _ngcontent-ske-c55="" class="custom-breadcrumbs"><a _ngcontent-ske-c55="" href="#">Home</a><span
+            _ngcontent-ske-c55="" class="mx-2 slash">/</span><a _ngcontent-ske-c55="" href="#">Post</a><span
+            _ngcontent-ske-c55="" class="mx-2 slash">/</span><span _ngcontent-ske-c55="" class="text-white"><strong
+              _ngcontent-ske-c55="">Post a Ads</strong></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section _ngcontent-ske-c55="" class="site-section">
+  <div _ngcontent-ske-c55="" class="container">
+    <div _ngcontent-ske-c55="" class="row align-items-center mb-5">
+      <div _ngcontent-ske-c55="" class="col-lg-8 mb-4 mb-lg-0">
+        <div _ngcontent-ske-c55="" class="d-flex align-items-center">
+          <div _ngcontent-ske-c55="">
+            <h2 _ngcontent-ske-c55="">Post An Ads</h2>
+          </div>
+        </div>
+      </div>
+      <div _ngcontent-ske-c55="" class="col-lg-4">
+        <div _ngcontent-ske-c55="" class="row">
+          <div _ngcontent-ske-c55="" class="col-6"></div>
+          <div _ngcontent-ske-c55="" class="col-6"></div>
+        </div>
+      </div>
+    </div>
+    <div _ngcontent-ske-c55="" class="row mb-5">
+      <div _ngcontent-ske-c55="" class="col-lg-12" >
+        <form _ngcontent-ske-c55="" novalidate="" method="post"
+          class="p-4 p-md-5 border rounded ng-untouched ng-pristine ng-valid">
+          <h3 _ngcontent-ske-c55="" class="text-black mb-5 border-bottom pb-2">Ads Details</h3>
+          <div _ngcontent-ske-c55="" class="form-group"><label _ngcontent-ske-c55=""
+              for="company-website-tw d-block">Upload Featured Image</label><br _ngcontent-ske-c55="">
+              
+              <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" (change)="onChange($event)">
+       <!-- <button onclick="resize()">Resize</button>
+<img id="image"> -->
+
+       <!-- (change)="onChange($event)" -->
+       <!-- <br/>canvas:<br/>
+<canvas id="canvas" width=64 height=64></canvas>
+
+<br/>output:<br/>
+<textarea id="file_output"></textarea> -->
+     </div> 
+          <div _ngcontent-ske-c55="" class="form-group"><label _ngcontent-ske-c55="" for="job-type">Device Type</label>
+            <div class="dropdown bootstrap-select border rounded" style="width: 100%;">
+              <select (change)="filterForeCasts($event.target.value)" _ngcontent-ske-c55=""
+                id="job-type" data-style="btn-black" data-width="100%" data-live-search="true" title="Select Device Type"
+                class="selectpicker border rounded" tabindex="-98">
+                <option class="bs-title-option" value=""></option>
+                <option _ngcontent-ske-c55="">Desktop</option>
+                <option _ngcontent-ske-c55="">Laptop</option>
+              </select>
+           </div>   
+          </div>
+          <div class="form-group">
+            <label for="job-title">Price</label>
+            <input type="text" class="form-control" id="job-title" placeholder="Price" [(ngModel)]='price' 
+            [ngModelOptions]="{standalone: true}">
+          </div>
+          <div class="form-group">
+            <label for="job-title">Phone</label>
+            <input type="text" class="form-control" id="job-title" placeholder="Phone" [(ngModel)]='phone' 
+            [ngModelOptions]="{standalone: true}">
+          </div>
+          <div _ngcontent-ske-c55="" class="form-group"><label _ngcontent-ske-c55="" for="job-description" >Device
+              Description</label>
+            <div _ngcontent-ske-c55="" id="editor-1" class="editor">
+              <textarea id="device-desc" rows="4" cols="50" [(ngModel)]='desc' 
+              [ngModelOptions]="{standalone: true}"></textarea>
+              <!-- <p _ngcontent-ske-c55="">Write a Name and Description</p> -->
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div _ngcontent-ske-c55="" class="row align-items-center mb-5">
+      <div _ngcontent-ske-c55="" class="col-lg-4 ml-auto">
+        <div _ngcontent-ske-c55="" class="row">
+          <div _ngcontent-ske-c55="" class="col-6"><a _ngcontent-ske-c55="" href="#"
+              class="btn btn-block btn-light btn-md"><span _ngcontent-ske-c55=""
+                class="icon-open_in_new mr-2"></span>Preview</a></div>
+          <div _ngcontent-ske-c55="" class="col-6">
+            <button _ngcontent-ske-c55="" class="btn btn-block btn-primary btn-md" (click)="save()">Save Ads</button>
+            <!-- (click)="compressFile()" -->
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- <script>
+var canvas=document.getElementById("canvas");
+  var ctx=canvas.getContext("2d");
+  var cw=canvas.width;
+  var ch=canvas.height;
+  var maxW=64;
+  var maxH=64;
+  
+  var input = document.getElementById('avatar');
+  var output = document.getElementById('file_output');
+  input.addEventListener('change', handleFiles);
+  
+  function handleFiles(e) {
+    var img = new Image;
+    img.onload = function() {
+      var iw=img.width;
+      var ih=img.height;
+      var scale=Math.min((maxW/iw),(maxH/ih));
+      var iwScaled=iw*scale;
+      var ihScaled=ih*scale;
+      canvas.width=iwScaled;
+      canvas.height=ihScaled;
+      ctx.drawImage(img,0,0,iwScaled,ihScaled);
+  output.value = canvas.toDataURL("image/jpeg",0.5);
+    }
+    img.src = URL.createObjectURL(e.target.files[0]);
+  }</script> -->
+  <script type="text/javascript">
+    function resize(){
+    //define the width to resize e.g 600px
+    var resize_width = 600;//without px
+  
+    //get the image selected
+    var item = document.querySelector('#avatar').files[0];
+  
+    //create a FileReader
+    var reader = new FileReader();
+  
+    //image turned to base64-encoded Data URI.
+    reader.readAsDataURL(item);
+    reader.name = item.name;//get the image's name
+    reader.size = item.size; //get the image's size
+    reader.onload = function(event) {
+      var img = new Image();//create a image
+      img.src = event.target.result;//result is base64-encoded Data URI
+      img.name = event.target.name;//set name (optional)
+      img.size = event.target.size;//set size (optional)
+      img.onload = function(el) {
+        var elem = document.createElement('canvas');//create a canvas
+  
+        //scale the image to 600 (width) and keep aspect ratio
+        var scaleFactor = resize_width / el.target.width;
+        elem.width = resize_width;
+        elem.height = el.target.height * scaleFactor;
+  
+        //draw in canvas
+        var ctx = elem.getContext('2d');
+        ctx.drawImage(el.target, 0, 0, elem.width, elem.height);
+  
+        //get the base64-encoded Data URI from the resize image
+        var srcEncoded = ctx.canvas.toDataURL(el.target, 'image/jpeg', 0);
+  
+        //assign it to thumb src
+        document.querySelector('#image').src = srcEncoded;
+  
+        /*Now you can send "srcEncoded" to the server and
+        convert it to a png o jpg. Also can send
+        "el.target.name" that is the file's name.*/
+  
+      }
+    }
+  }
+  </script>

@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>PsAggregator &mdash; Website to gather results across other palestinian websites</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Free-Template.co" />
+
+    {% load static %}
+   {% load bootstrap4 %}
+<!--    {% bootstrap_css %}-->
+<!--    {% bootstrap_javascript %}-->
+
+
+    <link rel="shortcut icon" href="{% static 'ftco-32x32.png' %}">
+
+<!--    <link rel="stylesheet" href="css/custom-bs.css">-->
+
+<!--    <link rel="stylesheet" href="css/jquery.fancybox.min.css">-->
+<!--    <link rel="stylesheet" href="css/bootstrap-select.min.css">-->
+<!--    <link rel="stylesheet" href="fonts/icomoon/style.css">-->
+<!--    <link rel="stylesheet" href="fonts/line-icons/style.css">-->
+<!--    <link rel="stylesheet" href="css/owl.carousel.min.css">-->
+<!--    <link rel="stylesheet" href="css/animate.min.css">-->
+
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/custom-bs.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/jquery.fancybox.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/bootstrap-select.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fonts/icommon/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fonts/line-icons/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/animate.min.css' %}" rel="stylesheet" type="text/css">
+
+
+    <!-- MAIN CSS -->
+   <!-- <link rel="stylesheet" href="css/style.css">-->
+
+  </head>
+  <body id="top">
+
+<div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+
+
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="site-logo col-6"><a href="index.html">PS-AGGREGATOR</a></div>
+
+          <nav class="mx-auto site-navigation">
+            <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+              <li><a href="index.html" class="nav-link active">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="job-listings.html">Ads List</a></li>
+
+              <li><a href="contact.html">Contact</a></li>
+              <li class="d-lg-none"><a href="post-job.html"><span class="mr-2">+</span> Post an Ads</a></li>
+              <li class="d-lg-none"><a href="login.html">Log In</a></li>
+            </ul>
+          </nav>
+
+          <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+            <div class="ml-auto">
+              <a href="post-job.html" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Post an Ads</a>
+              <a href="login.html" class="btn btn-primary border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-lock_outline"></span>Log In</a>
+            </div>
+            <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- HOME -->
+    <section class="home-section section-hero overlay bg-image" style="background-image: url('{% static 'images/hero_1.jpg'%}');" id="home-section">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-12">
+            <div class="mb-5 text-center">
+              <h1 class="text-white font-weight-bold">The Easiest Way To Get Your Search Results</h1>
+              <p>A website to gather results across other palestinian websites.</p>
+            </div>
+            <form method="post" class="search-jobs-form">
+              <div class="row mb-5">
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+
+                  <select class="form-control form-control-lg" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Ads Type">
+                    <option>Car</option>
+                    <option>Computer</option>
+                    <option>Laptop</option>
+                    <option>Mobile phone</option>
+                    <option>TV</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <select class="form-control form-control-lg" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Type">
+                    <option>BMW</option>
+                    <option>Mercedes</option>
+                    <option>GTI</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <input type="text" class="form-control form-control-lg" placeholder="MAX Price">
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <input type="text" class="form-control form-control-lg" placeholder="Min Price">
+                </div>
+                <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
+                  <button type="submit" class="btn btn-primary btn-lg btn-block text-white btn-search"><span class="icon-search icon mr-2"></span>Search Ads</button>
+                </div>
+
+
+              </div>
+
+              <div class="row">
+                <div class="col-md-12 popular-keywords">
+                  <h3>Trending Keywords:</h3>
+                  <ul class="keywords list-unstyled m-0 p-0">
+                    <li><a href="#" class="">BMW</a></li>
+                    <li><a href="#" class="">MSI Gaming Laptop</a></li>
+                    <li><a href="#" class="">Apple Iphone</a></li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+<!--      <a href="#next" class="scroll-button smoothscroll">-->
+<!--        <span class=" icon-keyboard_arrow_down"></span>-->
+<!--      </a>-->
+
+    </section>
+
+    <section class="py-5 bg-image overlay-primary fixed overlay" id="next" style="background-image: url('{% static 'images/hero_1.jpg'%}');">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-7 text-center">
+            <h2 class="section-title mb-2 text-white">SEARCH RESULTS</h2>
+
+          </div>
+        </div>
+
+        <div class="row pb-0 block__19738 section-counter">
+
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="4">0</strong>
+            </div>
+            <span class="caption">Aggregated websites</span>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="54">0</strong>
+            </div>
+            <span class="caption">Our website results</span>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="120">0</strong>
+            </div>
+            <span class="caption">Other websites results</span>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <section class="site-section">
+      <div class="container">
+
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-7 text-center">
+            <h2 class="section-title mb-2">43 Ads Listed</h2>
+          </div>
+        </div>
+
+        <ul class="job-listings mb-5">
+          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+            <a href="job-single.html"></a>
+            <div class="job-listing-logo">
+              <img src="{% static 'images/PC.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            </div>
+
+            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+              <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                <h2>ALIENWARE AURORA R9 AL-RD33-11735</h2>
+                <strong>watanimall.com</strong>
+              </div>
+
+              <div class="job-listing-meta">
+                <span class="badge badge-success">200,000 NIS</span>
+              </div>
+            </div>
+
+          </li>
+          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+            <a href="job-single.html"></a>
+            <div class="job-listing-logo">
+              <img src="{% static 'images/PC.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            </div>
+
+            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+              <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                <h2>LENOVO LEGION T730 TOWER 90JF0015YS</h2>
+                <strong>watanimall.com</strong>
+              </div>
+              <div class="job-listing-meta">
+                <span class="badge badge-success">6,462 NIS</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+            <a href="job-single.html"></a>
+            <div class="job-listing-logo">
+              <img src="{% static 'images/BMW.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            </div>
+
+            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+              <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                <h2>BMW i8</h2>
+                <strong>shobiddak.com</strong>
+              </div>
+              <div class="job-listing-meta">
+                <span class="badge badge-success">200,000 NIS</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+            <a href="job-single.html"></a>
+            <div class="job-listing-logo">
+              <img src="{% static 'images/BMW.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            </div>
+
+            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+              <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                <h2>BMW x6</h2>
+                <strong>shobiddak.com</strong>
+              </div>
+              <div class="job-listing-meta">
+                <span class="badge badge-success">180,000 NIS</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+            <a href="job-single.html"></a>
+            <div class="job-listing-logo">
+              <img src="{% static 'images/laptop.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            </div>
+
+            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+              <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                <h2>MSI GE65 RAIDER 9SF-200IL 9S7-16U112-200</h2>
+                <strong>watanimall.com</strong>
+              </div>
+
+              <div class="job-listing-meta">
+                <span class="badge badge-success">11,539 NIS</span>
+              </div>
+            </div>
+          </li>
+          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+            <a href="job-single.html"></a>
+            <div class="job-listing-logo">
+              <img src="{% static 'images/laptop.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            </div>
+
+            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+              <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                <h2>ASUS ROG STRIX FX531 FX531GT-BQ273</h2>
+                <strong>watanimall.com</strong>
+              </div>
+              <div class="job-listing-meta">
+                <span class="badge badge-success">3,571 NIS</span>
+              </div>
+            </div>
+
+          </li>
+          <li class="job-listing d-block d-sm-flex pb-3 pb-sm-0 align-items-center">
+            <a href="job-single.html"></a>
+            <div class="job-listing-logo">
+              <img src="{% static 'images/Monitor.jpg' %}" alt="Free Website Template by Free-Template.co" class="img-fluid">
+            </div>
+
+            <div class="job-listing-about d-sm-flex custom-width w-100 justify-content-between mx-4">
+              <div class="job-listing-position custom-width w-50 mb-3 mb-sm-0">
+                <h2>Aoc C24G1 Series 144Hz</h2>
+                <strong>watanimall.com</strong>
+              </div>
+              <div class="job-listing-meta">
+                <span class="badge badge-success">999 NIS</span>
+              </div>
+            </div>
+          </li>
+
+
+
+
+        </ul>
+
+        <div class="row pagination-wrap">
+          <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
+            <span>Showing 1-7 Of 43 Ads</span>
+          </div>
+          <div class="col-md-6 text-center text-md-right">
+            <div class="custom-pagination ml-auto">
+              <a href="#" class="prev">Prev</a>
+              <div class="d-inline-block">
+              <a href="#" class="active">1</a>
+              <a href="#">2</a>
+              <a href="#">3</a>
+              <a href="#">4</a>
+              </div>
+              <a href="#" class="next">Next</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SCRIPTS -->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/stickyfill.min.js' %}"></script>
+    <script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'js/jquery.easing.1.3.js' %}"></script>
+
+    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+
+    <script src="{% static 'js/bootstrap-select.min.js' %}"></script>
+
+    <script src="{% static 'js/custom.js' %}"></script>
+  </div>
+  </body>
+</html>
