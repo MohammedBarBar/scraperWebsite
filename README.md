@@ -4,5 +4,5 @@ For spider we use the command (scrapy crawl "name") in this project we havev nam
 
 Project Partners:
 1) Mohammed Barbar
-2) Wassem Hmeidat
+2) Waseem Hmeidat
 3) Yousef Shaheen
