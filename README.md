@@ -21,9 +21,3 @@ Project Partners:
 1-Mohammed Barbar
 2-Waseem Hmeidat
 3-Yousef Shaheen
-
-
- 
-
-
-
