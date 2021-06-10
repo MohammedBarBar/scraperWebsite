@@ -16,7 +16,7 @@ cssselect==1.1.0
 dataclasses==0.6
 defusedxml==0.6.0
 distlib==0.3.0
-Django==2.2.12
+Django==2.2.24
 django-allauth==0.41.0
 django-bootstrap4==1.1.1
 django-cors-headers==3.2.1
