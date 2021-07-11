@@ -310,13 +310,13 @@ def DeleteDevice(request):
         if type == 'Desktop':
             result = Desktops.objects.get(id=pk)
             result.delete()
-            return JsonResponse({'message': "fuck"}, status=status.HTTP_200_OK)
+            return JsonResponse({'message': "Error"}, status=status.HTTP_200_OK)
 
             # operation = result.delete()
         else:
             result = Laptops.objects.get(id=pk)
             result.delete()
-            return JsonResponse({'message': "fuck"}, status=status.HTTP_200_OK)
+            return JsonResponse({'message': "Error"}, status=status.HTTP_200_OK)
 
 
 class GroupViewSet(viewsets.ModelViewSet):
